@@ -1,0 +1,38 @@
+
+h2 {
+  text-align: center;
+  background-color: solid lightseagreen 5px;
+}
+body {
+  background-color: blue;
+}
+table, th, td {
+  border: 1px solid;
+}
+table {
+  width: 100%;
+}
+th {
+  width: 200px;
+  height: 40px;
+  }
+td {
+  height: 30px;
+  text-align: center;
+}
+div.sticky {
+  position: sticky;
+  top: 0;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: lightblue;
+  border: 2px solid #4CAF50;
+}
+div.top-stick {
+   display:  flex;
+   flex-wrap: wrap;
+   align-content:  center;
+   width: auto;
+   height: 50px;
+   align-content: center;
+}
