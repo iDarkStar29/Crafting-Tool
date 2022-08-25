@@ -4,7 +4,8 @@
   <link rel="stylesheet" type="text/css" href="CraftingTool.css">
 </head>
 <body>
-<script src="CraftingToolObject.js">
+<script src='CraftingToolObject.js'></script>
+<script src='CraftingToolFunction.js'>
 </script>
 <div class='sticky'>
 <p id='demo'></p>
@@ -36,7 +37,8 @@ Third Perk Selected </p>
     <th class='percent' style='width: 40px'>Craft %</th>
   </tr>
   <tr>
-    <td style='background-color: black; width: 75px'> <button type='button' onclick='refresh()'>Select</button>
+    <td style='background-color: black; width: 75px'> 
+      <button type='button' onclick='remove(perkasset)'>Select</button>
     <td id='perkOne'></td>
     <td id='perkOneEffect' style='text-align: left; padding-left: 5px'></td>
     <td id='perkOnePercent'></td>
