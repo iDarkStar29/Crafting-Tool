@@ -1,1 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id='iDarkStar'> iDarkStar is Green</p>
+<button id='myBtn'>Press Me!</button>
+</body>
+<script>
+document.getElementById("myBtn").addEventListener("click", function() {
+  faction();
+});
 
+function faction() {
+var x = 'purple'
+document.getElementById('iDarkStar').innerHTML = "iDarkStar is going " + x + ' tonight.';
+}
+</script>
+</html>
