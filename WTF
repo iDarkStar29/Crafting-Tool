@@ -1,8 +1,26 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+body {
+  background-color: green;
+  }
+p {
+  font-size: 100px;
+  }
+  button {
+  font-size: 50px;
+  border: solid black 10px;
+  }
+  </style>
+  </head>
 <body>
+<huge>
 <p id='iDarkStar'> iDarkStar is Green</p>
+</huge>
+
 <button id='myBtn'>Press Me!</button>
+
 </body>
 <script>
 document.getElementById("myBtn").addEventListener("click", function() {
@@ -11,6 +29,7 @@ document.getElementById("myBtn").addEventListener("click", function() {
 
 function faction() {
 var x = 'purple'
+document.body.style.backgroundColor = "purple";
 document.getElementById('iDarkStar').innerHTML = "iDarkStar is going " + x + ' tonight.';
 }
 </script>
