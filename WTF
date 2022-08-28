@@ -4,11 +4,15 @@
 <style>
 body {
   background-color: green;
+  height: window;
+  width: window;
+  border: solid black 10px;
+  padding: 30px;
   }
 p {
   font-size: 100px;
   }
-  button {
+button {
   font-size: 50px;
   border: solid black 10px;
   }
@@ -28,9 +32,9 @@ document.getElementById("myBtn").addEventListener("click", function() {
 });
 
 function faction() {
-var x = 'purple'
+var x = 'Purple'
 document.body.style.backgroundColor = "purple";
-document.getElementById('iDarkStar').innerHTML = "iDarkStar is going " + x + ' tonight.';
+document.getElementById('iDarkStar').innerHTML = "but iDarkStar is going " + x + ' tonight.';
 }
 </script>
 </html>
