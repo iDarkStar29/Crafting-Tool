@@ -1,42 +1,74 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-body {
-  background-color: green;
-  height: window;
-  width: window;
-  border: solid black 10px;
-  padding: 30px;
-  }
-p {
-  font-size: 100px;
-  }
-button {
-  font-size: 50px;
-  border: solid black 10px;
-  }
-  </style>
-  </head>
-<body>
-<huge>
-<p id='iDarkStar'> iDarkStar is Green</p>
-</huge>
+const perks = [
+{ perkName: 'Sturdy Energy', perkEffect: 'When blocking a hit while below 30% stamina, gain 38% increased stamina regen for 6s. (Effect is removed if player becomes exhausted)', perkPercent: 14.49},
 
-<button id='myBtn'>Press Me!</button>
+{ perkName: 'Resilient', perkEffect: 'Critical hits deal 4.8% less damage to you.', perkPercent: 14.49},
 
-</body>
-<script>
+
+{ perkName: 'Freedom', perkEffect: 'Slow, Stun, and Root expires 10% faster.', perkPercent: 4.83},
+
+
+{ perkName: 'Vigor', perkEffect: 'Burn, Bleed, and Poison expires 10% faster.', perkPercent: 4.83},
+
+
+{ perkName: 'Invigorated', perkEffect: 'Weaken, Disease, Exhaust, and Rend expires 10% faster.', perkPercent: 4.83},
+
+
+{ perkName: 'Refreshing', perkEffect: 'Reduces max cooldowns by 2.8%.', perkPercent: 4.83},
+
+{ perkName: 'Refreshing Ward', perkEffect: 'Reduces active cooldowns by 1.9% after being hit 4 times. Does not trigger off persistent damage, DoT effects or blocked attacks.', perkPercent: 4.83},
+
+
+{ perkName: 'Refreshing Evasion', perkEffect: 'Reduces active cooldowns by 0.74% after exiting the dodge animation.', perkPercent: 4.83},
+
+
+{ perkName: 'Indestructible', perkEffect: 'This item no longer loses durability.', perkPercent: 4.35},
+
+
+{ perkName: 'Luck', perkEffect: '+2.8% chance at rare items from chests and monsters.', perkPercent: 3.62},
+
+
+{ perkName: 'Physical Aversion', perkEffect: 'You take 3.8% less damage from ranged physical attacks.', perkPercent: 2.3},
+
+
+{ perkName: 'Elemental Aversion', perkEffect: 'You take 3.8% less damage from ranged elemental attacks.', perkPercent: 2.3},
+
+{ perkName: 'Shirking Fortification', perkEffect: 'Dodging through an enemy attack grants fortify, increasing damage absorption by 3.8% for 6s. Each armor piece with this perk increases the potency of the effect.', perkPercent: 2.3},
+
+{ perkName: 'Ancient Ward', perkEffect: '+4.8% Damage Absorption against Ancient Guardians.', perkPercent: 1.84},
+
+
+{ perkName: 'Angry Earth Ward', perkEffect: '+4.8% Damage Absorption against Angry Earth.', perkPercent: 1.84},
+
+
+{ perkName: 'Corrupted Ward', perkEffect: '+4.8% Damage Absorption against Corrupted.', perkPercent: 1.84},
+
+
+{ perkName: 'Lost Ward', perkEffect: '+4.8% Damage Absorption against Lost.', perkPercent: 1.84},
+
+
+{ perkName: 'Corruption Resistance', perkEffect: '+15 Corruption Resistance. Also slows corruption damage.', perkPercent: 1.45},
+
+
+{ perkName: 'Blight Resistance', perkEffect: '+15 Blight Resistance. Also slows blight damage.', perkPercent: 1.45},
+
+
+{ perkName: 'Sword n Shield Skill Perks', perkEffect: 'SnS Skill Perks have a Higher chance to roll because it is technically 2 weapons.',
+{ perkName: 'Beast Ward', perkEffect: '+4.8% Damage Absorption against Beasts.',
+
+
+{ perkName: 'Skill perks', perkEffect: 'Every other Weapon Skill Perk without SnS', perkPercent: .21},
+
+{ perkName: 'Logging Luck',perkEffect: 'While Logging gain 5% chance at finding rare items.', perkPercent: .04},
+
+{ perkName: 'Harvesting Luck',  perkEffect: 'While Harvesting gain 5% chance at finding rare items.', perkPercent: .04},
+
+
+
+{ perkName: 'Mining Luck', perkEffect: 'While Mining gain 5% chance at finding rare items.', perkPercent: .04},
+
+
+{ perkName: 'Skinning Luck' perkEffect: 'While Skinning gain 5% chance at finding rare items.', perkPercent: .04},
+];
 document.getElementById("myBtn").addEventListener("click", function() {
-  faction();
+  first();
 });
-
-function faction() {
-var x = 'Purple'
-document.body.style.backgroundColor = "purple";
-document.getElementById('iDarkStar').innerHTML = "but iDarkStar is going " + x + ' tonight.';
-}
-</script>
-</html>
-
-https://www.dropbox.com/scl/fi/cc7kltkp0ek4zylykkteg/Hi.Lethal.html?dl=0&oref=e&r=ABuCCay0cNV5FEuaBolk9t2Te1Exh2Qm8i0TLyeGN7WLoALu8fZJGbproBgxCu7e7EMQunn9zhzQhu6VfSu5597fT5zmNW5HLIW-r2MaK6oM4qxQJxME78jnpYglkXfBKIRPBADfdMhn7CKjbMyEcdtTJFDfAz9PQX4EBwItBvziieNYkWE8jtAymlsxBVOLP04&sm=1
