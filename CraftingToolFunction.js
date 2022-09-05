@@ -8,10 +8,34 @@ btnGet.addEventListener('click', () => {
 
 
 });
-// auto-table by variable
+// auto-table by array
+<script>
 let text = "";
 
 for (let i = 0; i < 26; i++) {
-  text += "<tr><td>" + perkName[i] + "</td><td>" + perkEffect[i] + "</td><td>" + perkPercent[i] + "</td></tr>";
-}
-document.getElementById("myTable").innerHTML = text;
+  text += 
+"<tr>" + 
+"<td>" +
+"<button  id=\'myBtn" +    i + "\'>" +
+"Select" +
+"</td>" +
+"<td      id=\'perkName" + i + "\'>" +
+perkName[i] + 
+"</td>" +
+"<td id=\'perkEffect" +    i + "\'>" +
+perkEffect[i] + 
+"</td>" +
+"<td id=\'perkPercent" +   i + "\'>" +
+perkPercent[i] + 
+"</td>" +
+"</tr>";
+document.getElementById("myTable").innerHTML = 
+"<tr>" +
+"<th style=\'background-color: black\'></th>" +
+"<th>Perk</th>" +
+"<th>Effect</th>" +
+"<th>Craft%</th>" +
+"</tr>" +
+text;
+  }
+</script>
