@@ -1,4 +1,4 @@
-var perkName = [
+const perkName = [
 'Sturdy Energy',
 'Resilient',
 'Freedom',
@@ -27,7 +27,7 @@ var perkName = [
 'Skinning Luck'
 ];
 
-var perkEffect = [
+const perkEffect = [
 'When blocking a hit while below 30% stamina, gain 38% increased stamina regen for 6s. (Effect is removed if player becomes exhausted)',
 'Critical hits deal 4.8% less damage to you.',
 'Slow, Stun, and Root expires 10% faster.',
@@ -56,7 +56,7 @@ var perkEffect = [
 'While Skinning gain 5% chance at finding rare items.',
 ];
 
-var perkPercent = [
+const perkPercent = [
 14.49, 14.49, 4.83, 4.83, 4.83, 4.83, 4.83, 4.83, 4.35, 3.62, 2.3, 2.3, 2.3, 1.84, 1.84, 1.84, 1.84, 1.45, 1.45, .23, .23, .21, .04, .04, .04, .04
 ];
 
