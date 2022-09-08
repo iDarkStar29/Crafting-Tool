@@ -1,203 +1,55 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" type="text/css" href="CraftingTool.css">
-</head>
-<body>
-<script src='CraftingToolObject.js'></script>
-<script src='CraftingToolFunction.js'>
-</script>
-<div class='sticky'>
-<p id='demo'></p>
-<p id='demo1'></p>
-<h2>
-                                  Crafting Tool For Armor
-</h2>
-<div class='top-stick'>
-  <button style='width:50px; height: 50px'>X</button>
-  <p id='selectOne' style='text-align: center; background-color: lightgreen; border: solid 3px black; padding: 5px'>
-First Perk Selected </p>
-  <p id='selectTwo' style='text-align: center; background-color: lightgreen; border: solid 3px black; padding: 5px'>
-Second Perk Selected </p>
-  <p id='selectThree' style='text-align: center; background-color: lightgreen; border: solid 3px black; padding: 5px'>
-Third Perk Selected </p>
-<p id='percenttotal' style='text-align: center; background-color: lightgreen; border: solid 3px black; padding: 5px'>Craft %</p>
-</div>
-<div>
-   <p style='background-color: black; min-width: 100%; height: 20px; margin-top: 0%;margin-bottom: 0%; margin-left: 0%; margin-right: %'></p>
-</div>
-</div>
-
-
-<table id='myTable' style='background-color: lightgreen; padding: 5px'>
-  <tr>
-    <th style='width: 20px'> Click Box to Select Perk</th>
-    <th style='width: 100px'>Perk</th>
-    <th>Effect</th>
-    <th class='percent' style='width: 40px'>Craft %</th>
-  </tr>
-  <tr>
-    <td style='background-color: black; width: 75px'> 
-      <button type='button' onclick='remove(perkasset)'>Select</button>
-    <td id='perkOne'></td>
-    <td id='perkOneEffect' style='text-align: left; padding-left: 5px'></td>
-    <td id='perkOnePercent'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button type='button' onclick='removeTwo()'> Select </button>
-    <td id='perkTwo'></td>
-    <td id='perkTwoEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkTwoPercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkThree'></td>
-    <td id='perkThreeEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkThreePercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkFour'></td>
-    <td id='perkFourEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkFourPercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkFive'></td>
-    <td id='perkFiveEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkFivePercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkSix'></td>
-    <td id='perkSixEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkSixPercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkSeven'></td>
-    <td id='perkSevenEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkSevenPercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkEight'></td>
-    <td id='perkEightEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkEightPercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkNine'></td>
-    <td id='perkNineEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkNinePercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkTen'></td>
-    <td id='perkTenEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkTenPercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkEleven'></td>
-    <td id='perkElevenEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkElevenPercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkTwelve'></td>
-    <td id='perkTwelveEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkTwelvePercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkThirteen'></td>
-    <td id='perkThirteenEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkThirteenPercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkFourteen'></td>
-    <td id='perkFourteenEffect' style='text-align: left; padding-left: 5px'></td>
-    <td id='perkFourteenPercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkFifteen'></td>
-    <td id='perkFifteenEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkFifteenPercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkSixteen'></td>
-    <td id='perkSixteenEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkSixteenPercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkSeventeen'></td>
-    <td id='perkSeventeenEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkSeventeenPercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkEighteen'></td>
-    <td id='perkEighteenEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkEighteenPercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkNineteen'></td>
-    <td id='perkNineteenEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkNineteenPercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkTwenty'></td>
-    <td id='perkTwentyEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkTwentyPercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkTwentyOne'></td>
-    <td id='perkTwentyOneEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkTwentyOnePercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkTwentyTwo'></td>
-    <td id='perkTwentyTwoEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkTwentyTwoPercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkTwentyThree'></td>
-    <td id='perkTwentyThreeEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkTwentyThreePercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkTwentyFour'></td>
-    <td id='perkTwentyFourEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkTwentyFourPercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkTwentyFive'></td>
-    <td id='perkTwentyFiveEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkTwentyFivePercent' value='...'></td>
-  </tr>
-  <tr>
-    <td style='background-color: black'> <button> Select </button>
-    <td id='perkTwentySix'></td>
-    <td id='perkTwentySixEffect'style='text-align: left; padding-left: 5px'></td>
-    <td id='perkTwentySixPercent' value='...'></td>
-  </tr>
- </table>
- <footer style='text-align: center'>
-THE HEADACHE COMMENCES
- </footer>
-</body>
-<script src="CraftingToolObjectImport.js">
-</script>
-</html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="CraftingTool.css">
+   </head>
+  <body>
+    <script src='CraftingToolObject.js'>
+     </script>
+    <div class='sticky' style='  border: solid black 5px'>
+      <div style='border: solid black 5px'>
+      
+        <p id='demo'></p>
+        <p id='demo1'></p>
+        <h2>
+                                    Crafting Tool For Armor
+         </h2>
+      </div>
+        <div class='top-stick'>
+         <p3></p3>
+          <button id='rfrsh' style='width:10%; height: 61px'>
+                                      X
+          </button>
+          <p2 id='selectOne'>
+                                      First Perk Selected
+           </p2>
+          <p2 id='selectTwo'>
+                                      Second Perk Selected
+           </p2>
+          <p2 id='selectThree'>
+                                      Third Perk Selected 
+           </p2>
+          <p2 id='percenttotal' style='width: 100px; background-color: green; color: white'>
+                                      Craft %
+           </p2>
+          <p3></p3>
+       </div>
+     </div>
+    <div>
+      <h2>
+                                 Crafting Perk Table</p>
+       </h2>
+     </div>
+    <div class='table'>
+      <table id='myTable' style=
+      '
+      background-color: lightgreen; 
+      padding: 5px
+      '>
+     </div>
+      <script src='CraftingToolFunction.js';>
+       </script>
+       <script id='theFunction'>
+       </script>
+     </body>
+ </html>
