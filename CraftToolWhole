@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-        <style>
+    <style>
 body {
   background-color: rebeccapurple;
 }    
@@ -66,6 +66,7 @@ th {
   }
 tr {
   border: 1px solid;
+  height: 50px;
 }
 
 td {
@@ -76,51 +77,50 @@ td {
     </style>
    </head>
   <body>
-    <script>
-
-     </script>
-    <div class='sticky' style='  border: solid black 5px'>
-      <div style='border: solid black 5px'>
-      
+    <div class='topBlock'>
+      <div class='title'>
         <p id='demo'></p>
         <p id='demo1'></p>
         <h2>
                                     Crafting Tool For Armor
          </h2>
-      </div>
-        <div class='top-stick'>
-         <p3></p3>
-          <button id='rfrsh' style='width:10%; height: 61px'>
-                                      X
-          </button>
-          <p2 id='selectOne'>
-                                      First Perk Selected
-           </p2>
-          <p2 id='selectTwo'>
-                                      Second Perk Selected
-           </p2>
-          <p2 id='selectThree'>
-                                      Third Perk Selected 
-           </p2>
-          <p2 id='percenttotal' style='width: 100px; background-color: green; color: white'>
-                                      Craft %
-           </p2>
-          <p3></p3>
        </div>
      </div>
-    <div>
-      <h2>
-                                 Crafting Perk Table</p>
-       </h2>
-     </div>
+    <div class='sticky-perks'>
+    <p3></p3>
+    <button id='rfrsh' 
+         style='border: solid black 2px;
+                height: 60px;
+                width: 60px;
+                margin: 5px 0px 0px 5px;'>
+                                      X
+     </button>
+    <p2 id='selectOne'>
+                                      First Perk Selected
+     </p2>
+    <p2 id='selectTwo'>
+                                      Second Perk Selected
+     </p2>
+    <p2 id='selectThree'>
+                                      Third Perk Selected 
+     </p2>
+    <p2 id='percenttotal' 
+              style='width: 100px; background-color: green; color: white'>
+                                      Craft %
+     </p2>
+    <p3></p3>
+   </div>
     <div class='table'>
-      <table id='myTable' style=
-      '
-      background-color: lightgreen; 
-      padding: 5px
-      '>
-     </div>
-      <script>
+      <div class='tableTitle'>
+        <h2>
+                                 Crafting Perk Table
+       </h2>
+      </div>
+    <table id='myTable' 
+             style='background-color: lightgreen; padding: 5px'>
+     </table>
+    </div>
+<script>
       const perkName = [
 'Sturdy Energy',
 'Resilient',
@@ -203,7 +203,7 @@ perkName[i] +
 perkEffect[i] + 
 "</td>" +
 "<td" +
-"      style=\'width: 60px\'" +
+"      style=\'width: 80px\'" +
 "         id=\'perkPercent" +   i + "\'>" +
 perkPercent[i] + 
 "</td>" +
