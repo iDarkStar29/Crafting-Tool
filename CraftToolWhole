@@ -184,9 +184,10 @@ const perkPercent = [
 ];
       let text = "";
       let button = "";
+
 for (let i = 0; i < 26; i++)
 {
-  {
+  
     text += 
 "<tr>" + 
 "<td>" +
@@ -208,14 +209,14 @@ perkEffect[i] +
 perkPercent[i] + 
 "</td>" +
 "</tr>";
-  };
+  
 
-  {
+  
     button += 
-"document.getElementById(\"myBtn" + i + "\").addEventlistener(\"click\", function() {" + 
-"first(" + i + ")}" + 
+"document.getElementById(\"myBtn" + i + "\").addEventListener(\"click\", function() {" + 
+"first(" + i + ")" + 
 "});";
-  };
+  
 
 document.getElementById("myTable").innerHTML = 
 "<tr>" +
@@ -227,7 +228,6 @@ document.getElementById("myTable").innerHTML =
 text;
 };
 // THE TABLE IS ABOVE
-
 
        </script>
      </body>
