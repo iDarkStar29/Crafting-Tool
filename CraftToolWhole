@@ -225,24 +225,29 @@ text;
 };
 
    let Btn = "myBtn";
+   let row = "tr";
    for (let i = 0; i < 26; i++)
    {
     button += 
 document.getElementById(Btn + i).addEventListener("click", function() {first(i);});
 
-document.getElementById('demo1').innerHTML =  "fuck";
-};
-
-
-
 function first(p1) {
 
-
-
+   document.getElementById('myTable').deleteRow(p1 + 1);
    document.getElementById('selectOne').innerHTML = perkName[p1];
-};
+   
+   document.getElementById('myTable').removeEventListener("click", first(i));
 
-document.getElementById('demo').innerHTML = typeof button;
+}
+/*   document.getElementById(Btn + i).addEventListener("click", function() {second(i);});
+}
+
+function second(p1) {
+   document.getElementById('myTable').deleteRow(p1 + 1);
+   document.getElementById('selectTwo').innerHTML = perkName[p1];
+}*/
+};
+document.getElementById('demo1').innerHTML = typeof button;
 // THE TABLE IS ABOVE
        </script>
      </body>
