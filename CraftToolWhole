@@ -183,8 +183,8 @@ const perkPercent = [
 14.49, 14.49, 4.83, 4.83, 4.83, 4.83, 4.83, 4.83, 4.35, 3.62, 2.3, 2.3, 2.3, 1.84, 1.84, 1.84, 1.84, 1.45, 1.45, .23, .23, .21, .04, .04, .04, .04
 ];
       let text = "";
-      let button = '';
-      
+      let button;
+     
 for (let i = 0; i < 26; i++)
 {
   
@@ -192,7 +192,8 @@ for (let i = 0; i < 26; i++)
 "<tr>" + 
 "<td>" +
 "<button id=\'myBtn" +           i + "\'>" +
-"Select" +
+"Select" + 
+"</button>" +
 "</td>" +
 "<td" +
 "         style=\'width: 200px\'" +
@@ -210,10 +211,7 @@ perkPercent[i] +
 "</tr>";
   
 
-  let Btn = 'myBtn' + i;
-    button += 
-"document.getElementById(\'" + Btn + "\').addEventListener(\"click\", function() {first(" + i + ");}); </br>";
-  
+
 
 document.getElementById("myTable").innerHTML = 
 "<tr>" +
@@ -225,15 +223,27 @@ document.getElementById("myTable").innerHTML =
 text;
 
 };
-button;
+
+   let Btn = "myBtn";
+   for (let i = 0; i < 26; i++)
+   {
+    button += 
+document.getElementById(Btn + i).addEventListener("click", function() {first(i);});
+
+document.getElementById('demo1').innerHTML =  "fuck";
+};
+
+
 
 function first(p1) {
-  return document.getElementById('selectOne').innerHTML = perkName[p1];
-}
 
-document.getElementById('demo').innerHTML = button;
+
+
+   document.getElementById('selectOne').innerHTML = perkName[p1];
+};
+
+document.getElementById('demo').innerHTML = typeof button;
 // THE TABLE IS ABOVE
-
        </script>
      </body>
  </html>
