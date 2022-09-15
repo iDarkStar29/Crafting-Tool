@@ -184,13 +184,19 @@ const perkPercent = [
 ];
       let text = "";
       let button;
-     
+      /*
+      function deleteRow(r) {
+      var i = r.parentNode.parentNode.rowIndex;
+      document.getElementById('selectOne').innerHTMl = "fuck";
+      document.getElementById('myTable').deleteRow(i);
+      }*/
 for (let i = 0; i < 26; i++)
 {
   
     text += 
 "<tr>" + 
 "<td>" +
+/*"<input type=\'button\' value=\'Select\' onclick=\'deleteRow(this)\'" +*/
 "<button id=\'myBtn" +           i + "\'>" +
 "Select" + 
 "</button>" +
