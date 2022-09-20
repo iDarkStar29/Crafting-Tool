@@ -249,9 +249,6 @@ if (count == 2) {
             document.getElementById('percentTotal').innerHTML /
                  100 * (perkPercent2[p1] / 100) *
                  100 + '%';
-   for (let i = 0; i < 26; i++) {
-   document.getElementById('perkPercent' + i).innerHTML = perkPercent2[i];
-   }
    count++;
    
 }
@@ -260,7 +257,6 @@ if (count == 1) {
    document.getElementById('selectTwo').innerHTML = perkName[p1];
    document.getElementById('percentTotal').innerHTML = perkPercent1[p1];
    count++;
-   percentOne;
 }
 if (count == 0) {
    document.getElementById('myTable').deleteRow(p1 + 1);
