@@ -104,7 +104,7 @@ td {
     <p2 id='selectThree'>
                                       Third Perk Selected 
      </p2>
-    <p2 id='percenttotal' 
+    <p2 id='percentTotal' 
               style='width: 100px; background-color: green; color: white'>
                                       Craft %
      </p2>
@@ -182,21 +182,20 @@ const perkEffect = [
 const perkPercent = [
 14.49, 14.49, 4.83, 4.83, 4.83, 4.83, 4.83, 4.83, 4.35, 3.62, 2.3, 2.3, 2.3, 1.84, 1.84, 1.84, 1.84, 1.45, 1.45, .23, .23, .21, .04, .04, .04, .04
 ];
+const perkPercent1 = [
+16.1, 16.1, 5.37, 5.37, 5.37, 5.37, 5.37, 5.37, 4.67, 3.94, 2.6, 2.6, 2.6, 2.08, 2.08, 2.08, 2.08, 1.72, 1.72, .24, .24, .22, .05, .05, .05, .05
+];
+const perkPercent2 = [
+18.11, 18.11, 6.04, 6.04, 6.04, 6.04, 6.04, 6.04, 5.08, 4.34, 2.93, 2.93, 2.93, 2.10, 2.10, 2.10, 2.10, 2.13, 2.13, .25, .25, .23, .05, .05, .05, .05
+];
       let text = "";
       let button;
-      /*
-      function deleteRow(r) {
-      var i = r.parentNode.parentNode.rowIndex;
-      document.getElementById('selectOne').innerHTMl = "fuck";
-      document.getElementById('myTable').deleteRow(i);
-      }*/
 for (let i = 0; i < 26; i++)
 {
   
     text += 
 "<tr>" + 
 "<td>" +
-/*"<input type=\'button\' value=\'Select\' onclick=\'deleteRow(this)\'" +*/
 "<button id=\'myBtn" +           i + "\'>" +
 "Select" + 
 "</button>" +
@@ -211,7 +210,7 @@ perkEffect[i] +
 "</td>" +
 "<td" +
 "      style=\'width: 80px\'" +
-"         id=\'perkPercent" +   i + "\'>" +
+"         id=\'perkPercent" +   i + "\'>" + 
 perkPercent[i] + 
 "</td>" +
 "</tr>";
@@ -232,28 +231,44 @@ text;
 
    let Btn = "myBtn";
    let row = "tr";
+   let count = 0;
    for (let i = 0; i < 26; i++)
    {
     button += 
 document.getElementById(Btn + i).addEventListener("click", function() {first(i);});
-
+}
 function first(p1) {
 
+if (count == 3) {
+}
+
+if (count == 2) {
+   document.getElementById('myTable').deleteRow(p1 - 1);
+   document.getElementById('selectThree').innerHTML = perkName[p1];
+         document.getElementById('percentTotal').innerHTML =
+            document.getElementById('percentTotal').innerHTML /
+                 100 * (perkPercent2[p1] / 100) *
+                 100 + '%';
+   for (let i = 0; i < 26; i++) {
+   document.getElementById('perkPercent' + i).innerHTML = perkPercent2[i];
+   }
+   count++;
+   
+}
+if (count == 1) {
+   document.getElementById('myTable').deleteRow(p1);
+   document.getElementById('selectTwo').innerHTML = perkName[p1];
+   document.getElementById('percentTotal').innerHTML = perkPercent1[p1];
+   count++;
+   percentOne;
+}
+if (count == 0) {
    document.getElementById('myTable').deleteRow(p1 + 1);
    document.getElementById('selectOne').innerHTML = perkName[p1];
-   
-   document.getElementById('myTable').removeEventListener("click", first(i));
-
-}
-/*   document.getElementById(Btn + i).addEventListener("click", function() {second(i);});
-}
-
-function second(p1) {
-   document.getElementById('myTable').deleteRow(p1 + 1);
-   document.getElementById('selectTwo').innerHTML = perkName[p1];
-}*/
+   document.getElementById('percentTotal').innerHTML = "100%";
+   count++;
+}   
 };
-document.getElementById('demo1').innerHTML = typeof button;
 // THE TABLE IS ABOVE
        </script>
      </body>
